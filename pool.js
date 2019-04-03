@@ -8,4 +8,4 @@ var pool=mysql.createPool({
     database : 'app_' + process.env.APPNAME,
 	connectionLimit:100
 	});
-module.exports=pool;
+module.exports=pool
