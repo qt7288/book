@@ -11,7 +11,7 @@ $(function(){
         data: "hid=1",
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com/myPro/qz_iht",
+        url: "myPro/qz_iht",
         success: function(data) {
             alert("ceshi成功");
             $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
@@ -108,7 +108,7 @@ $(function(){
         data:"",
         dataType: "JSON", 
         async: true, 
-        url: "routes/myPro.js/qz_sr",
+        url: "myPro/qz_sr",
         success: function(data){
             // console.log(result);
 /****************************************************************************************/ 
@@ -215,7 +215,7 @@ var num=h.split("?")[1];
     data:{num},
     // dataType: "JSON", 
     async: true, 
-    url: "routes/myPro.js/qz_u_all",
+    url: "myPro/qz_u_all",
     success: function(data) {
         if(data.length!=1){
             // 如果返回的值不符合则不执行
@@ -250,7 +250,7 @@ var num=h.split("?")[1];
             data:{num},
             // dataType: "JSON", 
             async: true, 
-            url: "routes/myPro.js/qz_u_all_img",
+            url: "myPro/qz_u_all_img",
             success: function(data) {
             //    console.log(data);测试查询头像
                 if(data.length!=1){
@@ -272,7 +272,7 @@ $.ajax({
     data: "",
     dataType: "JSON", 
     async: true, 
-    url: "routes/myPro.js/qz_b_text",
+    url: "myPro/qz_b_text",
     success: function(data) {
           var btns="";
         for(var i=0;i<data.length;i++){
@@ -293,7 +293,7 @@ $.ajax({
     data: "iid=1",
     dataType: "JSON", 
     async: true, 
-    url: "routes/myPro.js/index",
+    url: "myPro/index",
     success: function(data) {
                         $('.bg-qjt').css({"background":`url(${data[0].mimg}) no-repeat fixed`,"background-size":"100%"});
                         $('.cfr-b1-b').html(`
@@ -320,7 +320,7 @@ $.ajax({
     data:{sltext,pageNo,pageSize},
     // dataType: "JSON", 
     async: true, 
-    url: "routes/myPro.js/qz_texty",
+    url: "myPro/qz_texty",
     success: function(result){
         if(result.code==404){
            $(".search-msg").html(":站内资源未查到该信息").css("color","red");
@@ -390,7 +390,7 @@ $(function(){
                     data:{pageNo,pageSize},
                     dataType: "JSON", 
                     async: true, 
-                    url: "routes/myPro.js/qz_text",
+                    url: "myPro/qz_text",
                     success: function(data) {
                         console.log(data.length);
                         var h=window.location.href;
@@ -460,7 +460,7 @@ $(function(){
                     data:{pageNo,pageSize},
                     dataType: "JSON", 
                     async: true, 
-                    url: "routes/myPro.js/qz_text",
+                    url: "myPro/qz_text",
                     success: function(data) {
                         var carda="";
                         for(var i=0;i<data.length;i++){
@@ -516,7 +516,7 @@ $(function(){
                 data:{pageNo,pageSize},
                 dataType: "JSON", 
                 async: true, 
-                url: "routes/myPro.js/qz_text",
+                url: "myPro/qz_text",
                 success: function(data) {
                     var carda="";
                     for(var i=0;i<data.length;i++){

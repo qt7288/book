@@ -10,7 +10,7 @@ $(function(){
         data: "hid=3",
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com/routes/myPro.js/qz_iht",
+        url: "myPro/qz_iht",
         success: function(data) {
             $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
         }
@@ -24,7 +24,7 @@ $(function(){
         data: "",
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com/routes/myPro.js/qz_bq",
+        url: "myPro/qz_bq",
         success: function(data) {
                 $("#header-h").html(`
                 <ul>
@@ -55,7 +55,7 @@ $(function(){
         data:"",
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com/routes/myPro.js/qz_Fchain",
+        url: "myPro/qz_Fchain",
         success: function(result){
             $(".share").html(`
                         <p>链接分享</p>

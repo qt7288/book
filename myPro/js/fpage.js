@@ -14,7 +14,7 @@ $(function(){
         data:{num},
         // dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com/routes/myPro.js/qz_u_all",
+        url: "myPro/qz_u_all",
         success: function(data) {
             if(data.length!=1){
 
@@ -56,7 +56,7 @@ $(function(){
         data: {fum},
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com/routes/myPro.js/qz_text_fpage",
+        url: "myPro/qz_text_fpage",
         success: function(result) {
             console.log(result);
             console.log(fum);
@@ -113,7 +113,7 @@ $(function(){
         data: "hid=1",
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com/routes/routes/myPro.js.js/qz_iht",
+        url: "myPro/qz_iht",
         success: function(data) {
             $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
         }
@@ -126,7 +126,7 @@ $(function(){
         data: "",
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com/routes/myPro.js/qz_bq",
+        url: "myPro/qz_bq",
         success: function(data) {
             $("#header-h").html(`
             <ul>
@@ -212,7 +212,7 @@ $(function(){
             data:{num},
             // dataType: "JSON", 
             async: true, 
-            url: "http://book688.applinzi.com/routes/routes/myPro.js.js/qz_u_all_img",
+            url: "myPro/qz_u_all_img",
             success: function(data) {
             //    console.log(data);测试查询头像
                 if(data.length!=1){
@@ -260,7 +260,7 @@ $(function(){
             data: "",
             dataType: "JSON", 
             async: true, 
-            url: "http://book688.applinzi.com/routes/routes/myPro.js.js/qz_b_text",
+            url: "myPro/qz_b_text",
             // success: function(btns) {
             success: function(data) {
                   var btns="";
@@ -287,7 +287,7 @@ $(function(){
                 data: "iid=1",
                 dataType: "JSON", 
                 async: true, 
-                url: "http://book688.applinzi.com/routes/routes/myPro.js.js/index",
+                url: "myPro/index",
                 success: function(data) {
                     // $('.bg-qjt').css({"background":`url(${data[0].mimg}) no-repeat fixed`,"background-size":"100%"});
                     $('.cfr-b1-b').html(`
@@ -319,7 +319,7 @@ $(function(){
                         data:{fum,text,num},
                         dataType:"JSON",
                         async:true,
-                        url:"http://book688.applinzi.com/routes/routes/myPro.js.js/fpage_say",
+                        url:"myPro/fpage_say",
                         success:function(data){           
                             if(data.code==1){
                                  $(".fpage_btn").css("background-color","green").val("提交成功");

@@ -126,7 +126,7 @@ xhr.onreadystatechange=function(){
                             // 数据库操作人员*操作是否删除数据
                             alert(`"谨慎操作.删除第"+${tid}+"数据信息-----成功"`);
                             postText();
-                            // window.location.href="http://book688.applinzi.com:5050/02_list.html";
+                            // window.location.href="http://book688.applinzi.com/02_list.html";
                         }
                     }	
         };
@@ -209,7 +209,7 @@ inputBox.addEventListener("change",function(){
                 data: {name,Title,content,imagef},
                 dataType: "JSON", 
                 // async: false, 
-                url: "http://book688.applinzi.com/routes/rootR.js/qz_schuan",
+                url: "rootR/qz_schuan",
                 success: function(data) {
                     console.log(data);
                     if(data.code==200){
@@ -233,7 +233,7 @@ inputBox.addEventListener("change",function(){
             data: {tid},
             dataType: "JSON", 
             // async: false, 
-            url: "http://book688.applinzi.com/routes/rootR.js/qz_text_select",
+            url: "rootR/qz_text_select",
             success: function(data){
                 console.log(data);
                 if(data.code==200){
@@ -259,7 +259,7 @@ inputBox.addEventListener("change",function(){
                 data: {sltext,srtext,tid},
                 dataType: "JSON", 
                 // async: false, 
-                url: "http://book688.applinzi.com/routes/rootR.js/qz_text_ins",
+                url: "rootR/qz_text_ins",
                 success: function(data) {
                     console.log(data);
                     if(data.code==200){
@@ -279,7 +279,7 @@ inputBox.addEventListener("change",function(){
             data: {sltext,srtext,tid},
             dataType: "JSON", 
             // async: false, 
-            url: "http://book688.applinzi.com:5050/routes/rootR.js/qz_text_update",
+            url: "rootR/qz_text_update",
             success: function(data) {
                 console.log(data);
                 if(data.code==200){

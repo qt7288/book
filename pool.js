@@ -4,7 +4,7 @@ var pool=mysql.createPool({
     // host     : process.env.MYSQL_HOST,
     host     : 'http://book688.applinzi.com',
     // port     : process.env.MYSQL_PORT,
-    port     : '3306',
+    port     : '3307',
     // user     : process.env.ACCESSKEY,
     user     : 'k35kxnzk44',
     // password : process.env.SECRETKEY,
