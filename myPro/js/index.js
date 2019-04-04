@@ -100,11 +100,6 @@ $(function(){
     
 })
 
-// 测试移动位置
-$(function(){
-    var xtop=$("#section-h").offset().top;
-    // console.log(xtop);
-})
 $(function(){
     $.ajax({ 
         type: "GET",         

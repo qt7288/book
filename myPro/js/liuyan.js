@@ -142,7 +142,7 @@ $(function(){
                         data: "",
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://book688.applinzi.com/routes/myPro.js/qz_b_text",
+                        url: "myPro/qz_b_text",
                         // success: function(btns) {
                         success: function(data) {
                             var btns="";
@@ -172,7 +172,7 @@ $(function(){
                         data: {pageSize},
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://book688.applinzi.com/routes/myPro.js/qz_lyans",
+                        url: "myPro/qz_lyans",
                         success: function(data) {
                         $(".s-l").html(`
                                 <div id="lyb-title"><h2>短暂的瞬间，漫长的永远</h2></div>
@@ -233,7 +233,7 @@ $(function(){
                         data: {num,txta},
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://book688.applinzi.com/routes/myPro.js/qz_lyan",
+                        url: "myPro/qz_lyan",
                         // 成功的时候操作
                         success: function(data) {
                             $("#Tips").css("display","block");
@@ -254,7 +254,7 @@ $(function(){
                                 data: {num,pageSize},
                                 dataType: "JSON", 
                                 async: true, 
-                                url: "http://book688.applinzi.com/routes/myPro.js/qz_lyans",
+                                url: "myPro/qz_lyans",
                                 // 成功的时候操作
                                 success: function(data) {
                                 var ta="";

@@ -6,7 +6,7 @@ $(function(){
         data:"",
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com/routes/myPro.js/qz_foot",
+        url: "myPro/qz_foot",
         success: function(result){
             $(".sea").html(`
                 <img src="img/sea.png" class="foot-img-a" alt="">
