@@ -372,15 +372,15 @@ router.get('/qz_lyans',(req,res)=>{
 /*功能*19
 	:页脚内容
 */ 
-router.get('/qz_foot',(req,res)=>{
-	var sql="select * from qz_foot";
-	pool.query(sql,(err,result)=>{
-		if(err) throw err;
-		else{
-			res.send(result);
-		}
-})
-})
+// router.get('/qz_foot',(req,res)=>{
+// 	var sql="select * from qz_foot";
+// 	pool.query(sql,(err,result)=>{
+// 		if(err) throw err;
+// 		else{
+// 			res.send(result);
+// 		}
+// })
+// })
 
 /*功能*20
 	:音乐接口
