@@ -16,8 +16,8 @@ const cors = require("cors");
 var server=express();
 
 server.use(cors({
-	origin:[
-	],
+	// origin:[
+	// ],
 	credentials:true
   }));
 server.listen(5050);
