@@ -11,7 +11,7 @@ $(function(){
         data: "hid=1",
         dataType: "JSON", 
         async: true, 
-        url: "myPro/qz_iht",
+        url: "routes/myPro.js/qz_iht",
         success: function(data) {
             $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
         }
@@ -25,7 +25,7 @@ $(function(){
         data: "",
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com:5050/routes/myPro.js/qz_bq",
+        url: "routes/myPro.js/qz_bq",
         // url:"myPro/qz_bq",
         success: function(data) {
             // if(num=="undefined"){
@@ -106,7 +106,7 @@ $(function(){
         data:"",
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com:5050/myPro/qz_sr",
+        url: "http://book688.applinzi.com/routes/myPro.js/qz_sr",
         success: function(data){
             // console.log(result);
 /****************************************************************************************/ 
