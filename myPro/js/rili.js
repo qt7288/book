@@ -143,7 +143,7 @@ $(function(){
                     data:"",
                     dataType:"JSON",
                     // async: false, 
-                    url: "rootR/qz_timeThings",
+                    url: "myPro/qz_timeThings",
                     success: function(data) {   
                         console.log(data);
                         console.log(data.data.length);
@@ -180,7 +180,7 @@ $(function(){
                 data:{thing,timeCt},
                 dataType:"JSON",
                  // async: false, 
-            url: "rootR/qz_timeThing",
+            url: "myPro/qz_timeThing",
             success: function(data) {   
                 console.log(data);
                 console.log(data.data.length);
