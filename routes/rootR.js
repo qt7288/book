@@ -59,5 +59,33 @@ router.post('/qz_text_ins',(req,res)=>{
         }
 	});
 });
+// 插入记录数据
+router.post("/qz_timeThing",(req,res)=>{
+    // 获取客户端
+    var timeCt=req.body.timeCt;
+    var thing=req.body.thing;
+    var thighref="http://172.242.3.181";
 
+    var sql = "INSERT INTO qz_timeThing VALUES(null,?,?,?,now())";
+    pool.query(sql,[timeCt,thing,thighref],(err,result)=>{
+        if(err) throw err;
+        console.log(result);
+        // 查询数据库传入的数据，返回客户端
+        var sql1 = "SELECT thingId,timeCt,thing,thighref,qtimer FROM qz_timeThing";
+        pool.query(sql1,(err,result1)=>{
+            if(err) throw err;
+            // console.log(result1);
+            res.send({code:1,data:result1});
+        })
+    })
+})
+// 查询
+router.get("/qz_timeThings",(req,res)=>{
+    var sql1 = "SELECT thingId,timeCt,thing,thighref,qtimer FROM qz_timeThing ORDER BY thingId desc";
+    pool.query(sql1,(err,result1)=>{
+        if(err) throw err;
+        // console.log(result1);
+        res.send({code:1,data:result1});
+    })
+})
 module.exports=router

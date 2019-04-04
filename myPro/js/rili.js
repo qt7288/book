@@ -143,7 +143,7 @@ $(function(){
                     data:"",
                     dataType:"JSON",
                     // async: false, 
-                    url: "myPro/qz_timeThings",
+                    url: "rootR/qz_timeThings",
                     success: function(data) {   
                         console.log(data);
                         console.log(data.data.length);
@@ -180,19 +180,19 @@ $(function(){
                 data:{thing,timeCt},
                 dataType:"JSON",
                  // async: false, 
-            url: "myPro/qz_timeThing",
+            url: "rootR/qz_timeThing",
             success: function(data) {   
                 console.log(data);
                 console.log(data.data.length);
-                        // $("input[type=text]").val("");
-                        var a="";
-                        for(var i=0;i<data.data.length;i++){
-                            a+=`
-                            <div class="timeCt">${data.data[i].timeCt}</div>
-                            <div class="Thing">${data.data[i].thing}</div>
-                            `  
-                        }
-                        $(".timeCard").html(a);
+                        // // $("input[type=text]").val("");
+                        // var a="";
+                        // for(var i=0;i<data.data.length;i++){
+                        //     a+=`
+                        //     <div class="timeCt">${data.data[i].timeCt}</div>
+                        //     <div class="Thing">${data.data[i].thing}</div>
+                        //     `  
+                        // }
+                        // $(".timeCard").html(a);
                         
                 timer()
             }})
