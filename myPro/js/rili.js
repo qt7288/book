@@ -182,17 +182,17 @@ $(function(){
                  // async: false, 
             url: "rootR/qz_timeThing",
             success: function(data) {   
-                // console.log(data);
-                // console.log(data.data.length);
-                //         // $("input[type=text]").val("");
-                //         var a="";
-                //         for(var i=0;i<data.data.length;i++){
-                //             a+=`
-                //             <div class="timeCt">${data.data[i].timeCt}</div>
-                //             <div class="Thing">${data.data[i].thing}</div>
-                //             `  
-                //         }
-                //         $(".timeCard").html(a);
+                console.log(data);
+                console.log(data.data.length);
+                        // $("input[type=text]").val("");
+                        var a="";
+                        for(var i=0;i<data.data.length;i++){
+                            a+=`
+                            <div class="timeCt">${data.data[i].timeCt}</div>
+                            <div class="Thing">${data.data[i].thing}</div>
+                            `  
+                        }
+                        $(".timeCard").html(a);
                         
                 timer()
             }})

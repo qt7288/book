@@ -70,7 +70,7 @@ router.post("/qz_timeThing",(req,res)=>{
     var sql = "INSERT INTO qz_timeThing VALUES(null,?,?,?,now())";
     pool.query(sql,[timeCt,thing,thighref],(err,result)=>{
         if(err) throw err;
-        // console.log(result);
+        console.log(result);
         // 查询数据库传入的数据，返回客户端
         var sql1 = "SELECT thingId,timeCt,thing,thighref,qtimer FROM qz_timeThing";
         pool.query(sql1,(err,result1)=>{
@@ -89,4 +89,4 @@ router.get("/qz_timeThings",(req,res)=>{
         res.send({code:1,data:result1});
     })
 })
-module.exports=router;
+module.exports=router
