@@ -11,9 +11,11 @@ $(function(){
         data: "hid=1",
         dataType: "JSON", 
         async: true, 
-        url: "routes/myPro.js/qz_iht",
+        url: "routes/myPro.js",
         success: function(data) {
+            alert("ceshi成功");
             $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
+            
         }
     });
   });
