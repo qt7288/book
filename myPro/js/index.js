@@ -7,18 +7,18 @@ console.log(num);
 // 控制台输出地址栏截取的用户id
 /**********************************************************************蜂窝主体文字**********************************************************************/ 
 $(function(){
-    // $.ajax({ 
-    //     type: "GET",         
-    //     data: "hid=1",
-    //     dataType: "JSON", 
-    //     async: true, 
-    //     url: "myPro/qz_iht",
-    //     success: function(data) {
-    //         alert("ceshi成功");
-    //         $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
+    $.ajax({ 
+        type: "GET",         
+        data: "hid=1",
+        dataType: "JSON", 
+        async: true, 
+        url: "myPro/qz_iht",
+        success: function(data) {
+            alert("ceshi成功");
+            $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
             
-    //     }
-    // });
+        }
+    });
 
     $.ajax({ 
         type: "GET",         
