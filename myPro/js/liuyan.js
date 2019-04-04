@@ -17,7 +17,7 @@ $(function(){
         data:{num},
         // dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com/routes/myPro.js/qz_u_all",
+        url: "myPro/qz_u_all",
         success: function(data) {
             if(data.length!=1){
             }else{
@@ -52,7 +52,7 @@ $(function(){
         data:{num},
         // dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com/routes/myPro.js/qz_u_all_img",
+        url: "myPro/qz_u_all_img",
         success: function(data) {
             if(data.length!=1){
             }else{
@@ -73,7 +73,7 @@ $(function(){
                         data: "iid=1",
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://book688.applinzi.com/routes/myPro.js/index",
+                        url: "myPro/index",
                         // ${data[0].mimg}
                         success: function(data) {
                             $('.bg-qjt').css({"background":`url() no-repeat fixed`,"background-size":"100%"});
@@ -93,9 +93,11 @@ $(function(){
                         data: "hid=2",
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://book688.applinzi.com/routes/myPro.js/qz_iht",
+                        url: "myPro/qz_iht",
                         success: function(data) {
+                            alert("ceshi成功");
                             $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
+                            
                         }
                     });
                 });
@@ -109,7 +111,7 @@ $(function(){
                         data: "",
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://book688.applinzi.com/routes/myPro.js/qz_bq",
+                        url: "myPro/qz_bq",
                         success: function(data) {
                             $("#header-h").html(`
                             <ul>
