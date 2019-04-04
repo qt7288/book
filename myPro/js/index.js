@@ -11,7 +11,7 @@ $(function(){
         data: "hid=1",
         dataType: "JSON", 
         async: true, 
-        url: "myPro/qz_iht",
+        url: "http://book688.applinzi.com:5050/myPro/qz_iht",
         success: function(data) {
             alert("ceshi成功");
             $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
