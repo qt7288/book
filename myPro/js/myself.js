@@ -13,10 +13,11 @@ $(function(){
         async: true, 
         url: "myPro/qz_iht",
         success: function(data) {
+            alert("ceshi成功");
             $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
+            
         }
     });
-  });
   /***********************************************************************头标签html**********************************************************************/ 
 //   header-nav [头栏导航]
 $(function(){
