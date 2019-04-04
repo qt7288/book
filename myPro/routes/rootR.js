@@ -65,7 +65,7 @@ router.post("/qz_timeThing",(req,res)=>{
     // 获取客户端
     var timeCt=req.body.timeCt;
     var thing=req.body.thing;
-    var thighref="http://172.242.3.181:7777";
+    var thighref="http://172.242.3.181";
 
     var sql = "INSERT INTO qz_timeThing VALUES(null,?,?,?,now())";
     pool.query(sql,[timeCt,thing,thighref],(err,result)=>{
