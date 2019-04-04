@@ -25,7 +25,8 @@ $(function(){
         data: "",
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com:5050/myPro/qz_bq",
+        // url: "http://book688.applinzi.com:5050/myPro/qz_bq",
+        url: "myPro/qz_bq",
         success: function(data) {
             // if(num=="undefined"){
             //     num="Smith";
