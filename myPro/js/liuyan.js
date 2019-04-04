@@ -17,7 +17,7 @@ $(function(){
         data:{num},
         // dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com:5050/myPro/qz_u_all",
+        url: "http://book688.applinzi.com/routes/myPro.js/qz_u_all",
         success: function(data) {
             if(data.length!=1){
             }else{
@@ -52,7 +52,7 @@ $(function(){
         data:{num},
         // dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com:5050/myPro/qz_u_all_img",
+        url: "http://book688.applinzi.com/routes/myPro.js/qz_u_all_img",
         success: function(data) {
             if(data.length!=1){
             }else{
@@ -73,7 +73,7 @@ $(function(){
                         data: "iid=1",
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://book688.applinzi.com:5050/myPro/index",
+                        url: "http://book688.applinzi.com/routes/myPro.js/index",
                         // ${data[0].mimg}
                         success: function(data) {
                             $('.bg-qjt').css({"background":`url() no-repeat fixed`,"background-size":"100%"});
@@ -93,7 +93,7 @@ $(function(){
                         data: "hid=2",
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://book688.applinzi.com:5050/myPro/qz_iht",
+                        url: "http://book688.applinzi.com/routes/myPro.js/qz_iht",
                         success: function(data) {
                             $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
                         }
@@ -109,7 +109,7 @@ $(function(){
                         data: "",
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://book688.applinzi.com:5050/myPro/qz_bq",
+                        url: "http://book688.applinzi.com/routes/myPro.js/qz_bq",
                         success: function(data) {
                             $("#header-h").html(`
                             <ul>
@@ -140,7 +140,7 @@ $(function(){
                         data: "",
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://book688.applinzi.com:5050/myPro/qz_b_text",
+                        url: "http://book688.applinzi.com/routes/myPro.js/qz_b_text",
                         // success: function(btns) {
                         success: function(data) {
                             var btns="";
@@ -170,7 +170,7 @@ $(function(){
                         data: {pageSize},
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://book688.applinzi.com:5050/myPro/qz_lyans",
+                        url: "http://book688.applinzi.com/routes/myPro.js/qz_lyans",
                         success: function(data) {
                         $(".s-l").html(`
                                 <div id="lyb-title"><h2>短暂的瞬间，漫长的永远</h2></div>
@@ -231,7 +231,7 @@ $(function(){
                         data: {num,txta},
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://book688.applinzi.com:5050/myPro/qz_lyan",
+                        url: "http://book688.applinzi.com/routes/myPro.js/qz_lyan",
                         // 成功的时候操作
                         success: function(data) {
                             $("#Tips").css("display","block");
@@ -252,7 +252,7 @@ $(function(){
                                 data: {num,pageSize},
                                 dataType: "JSON", 
                                 async: true, 
-                                url: "http://book688.applinzi.com:5050/myPro/qz_lyans",
+                                url: "http://book688.applinzi.com/routes/myPro.js/qz_lyans",
                                 // 成功的时候操作
                                 success: function(data) {
                                 var ta="";

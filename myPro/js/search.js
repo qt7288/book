@@ -5,7 +5,7 @@ $(function(){
         data: "",
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com:5050/myPro/qz_bq",
+        url: "http://book688.applinzi.com/routes/myPro.js/qz_bq",
         success: function(data) {
                 $("#header-h").html(`
                 <ul>
@@ -47,7 +47,7 @@ $(function(){
         data:"",         
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com:5050/myPro/qz_textt",
+        url: "http://book688.applinzi.com/routes/myPro.js/qz_textt",
         success: function(data) {
            
 

@@ -14,7 +14,7 @@ $(function(){
         data:{num},
         // dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com:5050/myPro/qz_u_all",
+        url: "http://book688.applinzi.com/routes/myPro.js/qz_u_all",
         success: function(data) {
             if(data.length!=1){
 
@@ -56,7 +56,7 @@ $(function(){
         data: {fum},
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com:5050/myPro/qz_text_fpage",
+        url: "http://book688.applinzi.com/routes/myPro.js/qz_text_fpage",
         success: function(result) {
             console.log(result);
             console.log(fum);
@@ -64,7 +64,7 @@ $(function(){
                 var h=window.location.href;
                 var num=h.split("?")[2];
                 alert(`第${fum}条数据为空\n点击跳转页面`);
-                    window.location.href=`http://book688.applinzi.com:5050/index.html?${num}`;
+                    window.location.href=`http://book688.applinzi.com/index.html?${num}`;
                     // 如果数据为空跳转原页面
             }else{
             $('.s-l').html(` 
@@ -113,7 +113,7 @@ $(function(){
         data: "hid=1",
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com:5050/myPro/qz_iht",
+        url: "http://book688.applinzi.com/routes/routes/myPro.js.js/qz_iht",
         success: function(data) {
             $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
         }
@@ -126,17 +126,17 @@ $(function(){
         data: "",
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com:5050/myPro/qz_bq",
+        url: "http://book688.applinzi.com/routes/myPro.js/qz_bq",
         success: function(data) {
             $("#header-h").html(`
             <ul>
             <img src="http://taotao2019.applinzi.com/img/mfeng.png" class="mfLogo" title="蓝蜂☁为您服务">
-                <li title="home"><a href="http://book688.applinzi.com:5050/index.html?${num}">${data[0].smtext}</a></li>
-                <li class="dnone"><a href="http://book688.applinzi.com:5050/myself.html">${data[1].smtext}</a> 
+                <li title="home"><a href="index.html?${num}">${data[0].smtext}</a></li>
+                <li class="dnone"><a href="myself.html">${data[1].smtext}</a> 
                 </li>
                 <li><a href="javascript:;" class="Reward">${data[3].smtext}</a></li> 
-                <li><a href="http://book688.applinzi.com:5050/liuyan.html?user?${num}" title="Message Board">${data[4].smtext}</a></li>
-                <li class="dnone"><a href="http://book688.applinzi.com:5050/Fchain.html">${data[5].smtext}</a>
+                <li><a href="liuyan.html?user?${num}" title="Message Board">${data[4].smtext}</a></li>
+                <li class="dnone"><a href="Fchain.html">${data[5].smtext}</a>
 
                 </li>
                 <li><a href="http://172.242.3.181:8080/#/reg" title="Honeybee registration is welcomed">${data[6].smtext}</a> </li>
@@ -144,9 +144,8 @@ $(function(){
             `)
             $('.mfLogo').click(function(){
                 // if(num=="undefined"){
-                //         window.location.href=`http://book688.applinzi.com:5050/index.html`;
                 // }else{
-                     window.location.href=`http://book688.applinzi.com:5050/index.html?${num}`;
+                     window.location.href=`index.html?${num}`;
                 // }
             })
         }
@@ -213,7 +212,7 @@ $(function(){
             data:{num},
             // dataType: "JSON", 
             async: true, 
-            url: "http://book688.applinzi.com:5050/myPro/qz_u_all_img",
+            url: "http://book688.applinzi.com/routes/routes/myPro.js.js/qz_u_all_img",
             success: function(data) {
             //    console.log(data);测试查询头像
                 if(data.length!=1){
@@ -261,7 +260,7 @@ $(function(){
             data: "",
             dataType: "JSON", 
             async: true, 
-            url: "http://book688.applinzi.com:5050/myPro/qz_b_text",
+            url: "http://book688.applinzi.com/routes/routes/myPro.js.js/qz_b_text",
             // success: function(btns) {
             success: function(data) {
                   var btns="";
@@ -288,7 +287,7 @@ $(function(){
                 data: "iid=1",
                 dataType: "JSON", 
                 async: true, 
-                url: "http://book688.applinzi.com:5050/myPro/index",
+                url: "http://book688.applinzi.com/routes/routes/myPro.js.js/index",
                 success: function(data) {
                     // $('.bg-qjt').css({"background":`url(${data[0].mimg}) no-repeat fixed`,"background-size":"100%"});
                     $('.cfr-b1-b').html(`
@@ -320,7 +319,7 @@ $(function(){
                         data:{fum,text,num},
                         dataType:"JSON",
                         async:true,
-                        url:"http://book688.applinzi.com:5050/myPro/fpage_say",
+                        url:"http://book688.applinzi.com/routes/routes/myPro.js.js/fpage_say",
                         success:function(data){           
                             if(data.code==1){
                                  $(".fpage_btn").css("background-color","green").val("提交成功");

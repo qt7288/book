@@ -209,7 +209,7 @@ inputBox.addEventListener("change",function(){
                 data: {name,Title,content,imagef},
                 dataType: "JSON", 
                 // async: false, 
-                url: "http://book688.applinzi.com:5050/rootR/qz_schuan",
+                url: "http://book688.applinzi.com/routes/rootR.js/qz_schuan",
                 success: function(data) {
                     console.log(data);
                     if(data.code==200){
@@ -233,7 +233,7 @@ inputBox.addEventListener("change",function(){
             data: {tid},
             dataType: "JSON", 
             // async: false, 
-            url: "http://book688.applinzi.com:5050/rootR/qz_text_select",
+            url: "http://book688.applinzi.com/routes/rootR.js/qz_text_select",
             success: function(data){
                 console.log(data);
                 if(data.code==200){
@@ -259,7 +259,7 @@ inputBox.addEventListener("change",function(){
                 data: {sltext,srtext,tid},
                 dataType: "JSON", 
                 // async: false, 
-                url: "http://book688.applinzi.com:5050/rootR/qz_text_ins",
+                url: "http://book688.applinzi.com/routes/rootR.js/qz_text_ins",
                 success: function(data) {
                     console.log(data);
                     if(data.code==200){
@@ -279,7 +279,7 @@ inputBox.addEventListener("change",function(){
             data: {sltext,srtext,tid},
             dataType: "JSON", 
             // async: false, 
-            url: "http://book688.applinzi.com:5050/rootR/qz_text_update",
+            url: "http://book688.applinzi.com:5050/routes/rootR.js/qz_text_update",
             success: function(data) {
                 console.log(data);
                 if(data.code==200){
