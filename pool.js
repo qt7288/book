@@ -9,7 +9,7 @@ var pool=mysql.createPool({
     // password : process.env.SECRETKEY,
     password : '2mmiwk4l2j2iliw41i51xjy3x3l411jw1kmmy0kx',
     // database : 'app_' + process.env.APPNAME,
-    database : app_book688,
+    database : 'app_book688',
 	connectionLimit:100
 	});
 module.exports=pool
