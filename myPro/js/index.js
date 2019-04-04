@@ -28,8 +28,8 @@ $(function(){
         dataType: "JSON", 
         async: true, 
         url: "myPro/qz_bq",
-        // url:"myPro/qz_bq",
         success: function(data) {
+            console.log(data);
             // if(num=="undefined"){
             //     num="Smith";
             // }

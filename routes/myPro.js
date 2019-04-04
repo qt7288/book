@@ -258,11 +258,7 @@ router.get('/qz_bq',(req,res)=>{
 	var sql="select * from qz_bq";
 	pool.query(sql,(err,result)=>{
 		if(err) throw err;
-		if(result.length>0){
 			res.send(result);
-		}else{
-			res.send("1")
-		}
 	})
 })
 
