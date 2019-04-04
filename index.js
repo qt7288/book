@@ -3,9 +3,9 @@
 const express=require('express');
 const bodyParser=require('body-parser');
 //引入user文件
-// const userRouter=require('./routes/long_user.js');
+const userRouter=require('./routes/long_user.js');
 //const productRouter=require('./routes/product.js');
-// const demo=require('./routes/demo.js');
+const demo=require('./routes/demo.js');
 const myPro=require('./routes/myPro.js');
 const rootR=require('./routes/rootR.js');
 
@@ -29,12 +29,12 @@ server.use(express.static('./myPro'));
 server.use(express.static('./rootR'));
 
 server.use(bodyParser.urlencoded({
-	extended:false
+	extended:true
 }));
 //use路由器管理路由
 //把用户路由器挂载到/user下，访问形式/user/detail
-// server.use('/long_user',userRouter);
+server.use('/long_user',userRouter);
 //server.use('/product',productRouter);
-// server.use('/demo',demo);
+server.use('/demo',demo);
 server.use('/myPro',myPro);
 server.use('/rootR',rootR);
