@@ -3,24 +3,22 @@ var h=window.location.href;
 // 声明变量接收地址栏
 // 控制台输出地址栏信息
 var num=h.split("?")[1];
+console.log(num);
 // 控制台输出地址栏截取的用户id
 /**********************************************************************蜂窝主体文字**********************************************************************/ 
 $(function(){
-    $.ajax({ 
-        type: "GET",         
-        data: "hid=1",
-        dataType: "JSON", 
-        async: true, 
-        url: "myPro/qz_iht",
-        success: function(data) {
-            alert("ceshi成功");
-            $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
+    // $.ajax({ 
+    //     type: "GET",         
+    //     data: "hid=1",
+    //     dataType: "JSON", 
+    //     async: true, 
+    //     url: "myPro/qz_iht",
+    //     success: function(data) {
+    //         alert("ceshi成功");
+    //         $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
             
-        }
-    });
-
-  /***********************************************************************头标签html**********************************************************************/ 
-//   header-nav [头栏导航]
+    //     }
+    // });
 
     $.ajax({ 
         type: "GET",         
@@ -30,9 +28,6 @@ $(function(){
         url: "myPro/qz_bq",
         success: function(data) {
             console.log(data);
-            // if(num=="undefined"){
-            //     num="Smith";
-            // }
                 $("#header-h").html(`
                 <ul>
                 <img src="http://taotao2019.applinzi.com/img/mfeng.png" class="mfLogo" title="蓝蜂☁为您服务">
