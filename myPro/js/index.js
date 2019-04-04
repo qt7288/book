@@ -22,7 +22,7 @@ $(function(){
                ██║   ███████║██║   ██║   ██║   ███████║██║   ██║
                ██║   ██╔══██║██║   ██║   ██║   ██╔══██║██║   ██║
                ██║   ██║  ██║╚██████╔╝   ██║   ██║  ██║╚██████╔╝
-               ╚═╝   ╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ,"color":"red"
+               ╚═╝   ╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝ ╚═════╝ 
             `)
             
         }
@@ -46,7 +46,7 @@ $(function(){
                     <li><a href="liuyan.html?user?${num}" title="Message Board">${data[4].smtext}</a></li>
                     <li class="dnone"><a href="Fchain.html?${num}">${data[5].smtext}</a>
                     </li>
-                    <li><a href="http://172.242.3.181:8080/#/reg" title="Honeybee registration is welcomed">${data[6].smtext}</a> </li>
+                    <li><a href="javascript:;/#/reg" title="Honeybee registration is welcomed">${data[6].smtext}</a> </li>
                 </ul>
                 `)
                 $('.mfLogo').click(function(){
@@ -118,8 +118,8 @@ $(".s-r").html(`
          <h1>用户您好请先登录…</h1>
     </div>
     <div class="cfr-h1-b">
-       <button><a href="http://172.242.3.181:8080/#/login">登录</a></button>
-       <button><a href="http://172.242.3.181:8080/#/reg">注册</a></button>                      
+       <button><a href="javascript:;">登录</a></button>
+       <button><a href="javascript:;">注册</a></button>                      
     </div>
 </div>
 <div class="cfr-b">
@@ -142,7 +142,7 @@ $(".s-r").html(`
     <div class="cfr-h2-b">
         <!-- <form action=""> -->
             <input type="text" name="sltext" placeholder="Search..." class="searchA">
-            <button type="button" @click="btnsearch" class="search">站内查询<img src="img/wx/search.png"></button>
+            <button type="button" @click="btnsearch" class="search">站内查询<img src="img/search.png"></button>
         <!-- </form> -->
     </div> 
 </div>
