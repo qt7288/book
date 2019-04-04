@@ -1,7 +1,7 @@
 const express=require('express');
 //+链接池模块
 const pool=require('../pool.js');
-const bodyParser=require('body-parser');
+// const bodyParser=require('body-parser');
 //创建空的；路由器对象
 var router=express.Router();
 /*功能*1

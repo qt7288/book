@@ -1,6 +1,6 @@
 const express=require('express');
 const pool=require('../pool.js');
-const bodyParser=require('body-parser');
+// const bodyParser=require('body-parser');
 var router=express.Router();
 router.post('/qz_schuan',(req,res)=>{
     //获取参数
