@@ -88,7 +88,7 @@ $(function(){
 
 $(function(){
     $("#header-b").mouseover(function(){
-        $("#header-b>h1,#header-h>h2").css("color",function(){
+        $("#header-b>h1,#header-h>h2").css("color",function(){ 
             // return `rgba(${Math.random()*256},${Math.random()*256},${Math.random()*256},0.5)`
         });
     })
@@ -106,7 +106,7 @@ $(function(){
         data:"",
         dataType: "JSON", 
         async: true, 
-        url: "http://book688.applinzi.com/routes/myPro.js/qz_sr",
+        url: "routes/myPro.js/qz_sr",
         success: function(data){
             // console.log(result);
 /****************************************************************************************/ 
