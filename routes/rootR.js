@@ -60,7 +60,7 @@ router.post('/qz_text_ins',(req,res)=>{
 	});
 });
 // 插入记录数据
-router.post("/qz_timeThing",(req,res)=>{
+router.post("/qz_timething",(req,res)=>{
     // 获取客户端
     var timeCt=req.body.timeCt;
     var thing=req.body.thing;
@@ -80,7 +80,7 @@ router.post("/qz_timeThing",(req,res)=>{
     })
 })
 // 查询
-router.get("/qz_timeThings",(req,res)=>{
+router.get("/qz_timethings",(req,res)=>{
     var sql1 = "SELECT thingId,timeCt,thing,thighref,qtimer FROM qz_timeThing ORDER BY thingId desc";
     pool.query(sql1,(err,result1)=>{
         if(err) throw err;
