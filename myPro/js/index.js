@@ -11,7 +11,7 @@ $(function(){
         data: "hid=1",
         dataType: "JSON", 
         async: true, 
-        url: "http://172.242.3.181:7777/myPro/qz_iht",
+        url: "http://book688.applinzi.com:5050/myPro/qz_iht",
         success: function(data) {
             $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
         }
@@ -25,7 +25,7 @@ $(function(){
         data: "",
         dataType: "JSON", 
         async: true, 
-        url: "http://172.242.3.181:7777/myPro/qz_bq",
+        url: "http://book688.applinzi.com:5050/myPro/qz_bq",
         success: function(data) {
             // if(num=="undefined"){
             //     num="Smith";
@@ -33,21 +33,21 @@ $(function(){
                 $("#header-h").html(`
                 <ul>
                 <img src="http://taotao2019.applinzi.com/img/mfeng.png" class="mfLogo" title="蓝蜂☁为您服务">
-                    <li title="home"><a href="http://172.242.3.181:7777/index.html?${num}">${data[0].smtext}</a></li>
-                    <li class="dnone"><a href="http://172.242.3.181:7777/myself.html?${num}" title="brief introduction">${data[1].smtext}</a> 
+                    <li title="home"><a href="index.html?${num}">${data[0].smtext}</a></li>
+                    <li class="dnone"><a href="myself.html?${num}" title="brief introduction">${data[1].smtext}</a> 
                     </li>
                     <li><a href="javascript:;" class="Reward">${data[3].smtext}</a></li> 
-                    <li><a href="http://172.242.3.181:7777/liuyan.html?user?${num}" title="Message Board">${data[4].smtext}</a></li>
-                    <li class="dnone"><a href="http://172.242.3.181:7777/Fchain.html?${num}">${data[5].smtext}</a>
+                    <li><a href="liuyan.html?user?${num}" title="Message Board">${data[4].smtext}</a></li>
+                    <li class="dnone"><a href="Fchain.html?${num}">${data[5].smtext}</a>
                     </li>
                     <li><a href="http://172.242.3.181:8080/#/reg" title="Honeybee registration is welcomed">${data[6].smtext}</a> </li>
                 </ul>
                 `)
                 $('.mfLogo').click(function(){
                     if(num=="undefined"){
-                            window.location.href=`http://172.242.3.181:7777/index.html`;
+                            window.location.href=`index.html`;
                     }else{
-                         window.location.href=`http://172.242.3.181:7777/index.html?${num}`;
+                         window.location.href=`index.html?${num}`;
                     }
                 })
         }
@@ -105,7 +105,7 @@ $(function(){
         data:"",
         dataType: "JSON", 
         async: true, 
-        url: "http://172.242.3.181:7777/myPro/qz_sr",
+        url: "http://book688.applinzi.com:5050/myPro/qz_sr",
         success: function(data){
             // console.log(result);
 /****************************************************************************************/ 
@@ -212,7 +212,7 @@ var num=h.split("?")[1];
     data:{num},
     // dataType: "JSON", 
     async: true, 
-    url: "http://172.242.3.181:7777/myPro/qz_u_all",
+    url: "http://book688.applinzi.com:5050/myPro/qz_u_all",
     success: function(data) {
         if(data.length!=1){
             // 如果返回的值不符合则不执行
@@ -240,14 +240,14 @@ var num=h.split("?")[1];
                  </div>
         `).addClass("disnone");
             $('.zhuxiao').click(function(){
-                window.location.href="http://172.242.3.181:7777/index.html";
+                window.location.href="index.html";
             })
         $.ajax({ 
             type: "GET",         
             data:{num},
             // dataType: "JSON", 
             async: true, 
-            url: "http://172.242.3.181:7777/myPro/qz_u_all_img",
+            url: "http://book688.applinzi.com:5050/myPro/qz_u_all_img",
             success: function(data) {
             //    console.log(data);测试查询头像
                 if(data.length!=1){
@@ -269,7 +269,7 @@ $.ajax({
     data: "",
     dataType: "JSON", 
     async: true, 
-    url: "http://172.242.3.181:7777/myPro/qz_b_text",
+    url: "http://book688.applinzi.com:5050/myPro/qz_b_text",
     success: function(data) {
           var btns="";
         for(var i=0;i<data.length;i++){
@@ -290,7 +290,7 @@ $.ajax({
     data: "iid=1",
     dataType: "JSON", 
     async: true, 
-    url: "http://172.242.3.181:7777/myPro/index",
+    url: "http://book688.applinzi.com:5050/myPro/index",
     success: function(data) {
                         $('.bg-qjt').css({"background":`url(${data[0].mimg}) no-repeat fixed`,"background-size":"100%"});
                         $('.cfr-b1-b').html(`
@@ -317,7 +317,7 @@ $.ajax({
     data:{sltext,pageNo,pageSize},
     // dataType: "JSON", 
     async: true, 
-    url: "http://172.242.3.181:7777/myPro/qz_texty",
+    url: "http://book688.applinzi.com:5050/myPro/qz_texty",
     success: function(result){
         if(result.code==404){
            $(".search-msg").html(":站内资源未查到该信息").css("color","red");
@@ -332,7 +332,7 @@ $.ajax({
                 <img src="${result[i].cimg}"></img>
             </div>
             <div class="card-r">
-                <h3><span>${result[i].sltext}</span><a href="http://172.242.3.181:7777/fpage.html?${result[i].tid}?${num}">${result[i].srtext}</a></h3>
+                <h3><span>${result[i].sltext}</span><a href="fpage.html?${result[i].tid}?${num}">${result[i].srtext}</a></h3>
                 <h4>${result[i].ftext}</h4>
             </div>
             <div id="card-f">
@@ -341,7 +341,7 @@ $.ajax({
                 </div>
                 <div class="c-f-r">
                     <!-- <span @click="zanr"><a href="javascript:;">点赞</a></span> -->
-                    <span @click="timer"><a href="http://172.242.3.181:7777/fpage.html?${result[i].tid}?${num}">阅读全文➷</a> </span>
+                    <span @click="timer"><a href="fpage.html?${result[i].tid}?${num}">阅读全文➷</a> </span>
                 </div>   
             </div>           
         </div>
@@ -387,7 +387,7 @@ $(function(){
                     data:{pageNo,pageSize},
                     dataType: "JSON", 
                     async: true, 
-                    url: "http://172.242.3.181:7777/myPro/qz_text",
+                    url: "http://book688.applinzi.com:5050/myPro/qz_text",
                     success: function(data) {
                         console.log(data.length);
                         var h=window.location.href;
@@ -405,7 +405,7 @@ $(function(){
                                 <img src="${data[i].cimg}"></img>
                             </div>
                             <div class="card-r">
-                                <h3><span>${data[i].sltext}</span><a href="http://172.242.3.181:7777/fpage.html?${data[i].tid}?${num}">${data[i].srtext}</a></h3>
+                                <h3><span>${data[i].sltext}</span><a href="fpage.html?${data[i].tid}?${num}">${data[i].srtext}</a></h3>
                                 <h4>${data[i].ftext}</h4>
                             </div>
                             <div id="card-f">
@@ -414,7 +414,7 @@ $(function(){
                                 </div>
                                 <div class="c-f-r">
                                     <!-- <span @click="zanr"><a href="javascript:;">点赞</a></span> -->
-                                    <span @click="timer"><a href="http://172.242.3.181:7777/fpage.html?${data[i].tid}?${num}">阅读全文➷</a> </span>
+                                    <span @click="timer"><a href="fpage.html?${data[i].tid}?${num}">阅读全文➷</a> </span>
                                 </div>   
                                
                             </div>           
@@ -424,7 +424,7 @@ $(function(){
 
                     var num=h.split("?")[1];
                     $('#headerP').click(function(){
-                        window.location.href=`http://172.242.3.181:7777/index.html?${num}`;
+                        window.location.href=`index.html?${num}`;
                     })
                     $('.s-l').html(carda).find(".card").css({"background":function(){
                         // return `rgba(${Math.random()*140},${Math.random()*140},${Math.random()*140},0.8)`;
@@ -457,7 +457,7 @@ $(function(){
                     data:{pageNo,pageSize},
                     dataType: "JSON", 
                     async: true, 
-                    url: "http://172.242.3.181:7777/myPro/qz_text",
+                    url: "http://book688.applinzi.com:5050/myPro/qz_text",
                     success: function(data) {
                         var carda="";
                         for(var i=0;i<data.length;i++){
@@ -467,7 +467,7 @@ $(function(){
                                 <img src="${data[i].cimg}"></img>
                             </div>
                             <div class="card-r">
-                                <h3><span>${data[i].sltext}</span><a href="http://172.242.3.181:7777/fpage.html?${data[i].tid}?${num}">${data[i].srtext}</a></h3>
+                                <h3><span>${data[i].sltext}</span><a href="fpage.html?${data[i].tid}?${num}">${data[i].srtext}</a></h3>
                                 <h4>${data[i].ftext}</h4>
                             </div>
                             <div id="card-f">
@@ -476,7 +476,7 @@ $(function(){
                                 </div>
                                 <div class="c-f-r">
                                     <!-- <span @click="zanr"><a href="javascript:;">点赞</a></span> -->
-                                    <span @click="timer"><a href="http://172.242.3.181:7777/fpage.html?${data[i].tid}?${num}">阅读全文➷</a> </span>
+                                    <span @click="timer"><a href="fpage.html?${data[i].tid}?${num}">阅读全文➷</a> </span>
                                 </div>   
                             </div>           
                         </div>
@@ -513,7 +513,7 @@ $(function(){
                 data:{pageNo,pageSize},
                 dataType: "JSON", 
                 async: true, 
-                url: "http://172.242.3.181:7777/myPro/qz_text",
+                url: "http://book688.applinzi.com:5050/myPro/qz_text",
                 success: function(data) {
                     var carda="";
                     for(var i=0;i<data.length;i++){
@@ -523,7 +523,7 @@ $(function(){
                             <img src="${data[i].cimg}"></img>
                         </div>
                         <div class="card-r">
-                            <h3><span>${data[i].sltext}</span><a href="http://172.242.3.181:7777/fpage.html?${data[i].tid}?${num}">${data[i].srtext}</a></h3>
+                            <h3><span>${data[i].sltext}</span><a href="fpage.html?${data[i].tid}?${num}">${data[i].srtext}</a></h3>
                             <h4>${data[i].ftext}</h4>
                         </div>
                         <div id="card-f">
@@ -532,7 +532,7 @@ $(function(){
                             </div>
                             <div class="c-f-r">
                                 <!-- <span @click="zanr"><a href="javascript:;">点赞</a></span> -->
-                                <span @click="timer"><a href="http://172.242.3.181:7777/fpage.html?${data[i].tid}?${num}">阅读全文➷</a> </span>
+                                <span @click="timer"><a href="fpage.html?${data[i].tid}?${num}">阅读全文➷</a> </span>
                             </div>   
                         </div>           
                     </div>

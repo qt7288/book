@@ -11,7 +11,7 @@ $(function(){
         data: "hid=3",
         dataType: "JSON", 
         async: true, 
-        url: "http://172.242.3.181:7777/myPro/qz_iht",
+        url: "http://book688.applinzi.com:5050/myPro/qz_iht",
         success: function(data) {
             $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
         }
@@ -25,17 +25,17 @@ $(function(){
         data: "",
         dataType: "JSON", 
         async: true, 
-        url: "http://172.242.3.181:7777/myPro/qz_bq",
+        url: "http://book688.applinzi.com:5050/myPro/qz_bq",
         success: function(data) {
                 $("#header-h").html(`
                 <ul>
                 <img src="http://taotao2019.applinzi.com/img/mfeng.png" class="mfLogo" title="蓝蜂☁为您服务">
-                    <li title="home"><a href="http://172.242.3.181:7777/index.html?${num}">${data[0].smtext}</a></li>
-                    <li class="dnone"><a href="http://172.242.3.181:7777/myself.html">${data[1].smtext}</a> 
+                    <li title="home"><a href="index.html?${num}">${data[0].smtext}</a></li>
+                    <li class="dnone"><a href="myself.html">${data[1].smtext}</a> 
                     </li>
                     <li><a href="javascript:;" class="Reward">${data[3].smtext}</a></li> 
-                    <li><a href="http://172.242.3.181:7777/liuyan.html?user?${num}" title="Message Board">${data[4].smtext}</a></li>
-                    <li class="dnone"><a href="http://172.242.3.181:7777/Fchain.html" title="Friend chain">${data[5].smtext}</a>
+                    <li><a href="liuyan.html?user?${num}" title="Message Board">${data[4].smtext}</a></li>
+                    <li class="dnone"><a href="Fchain.html" title="Friend chain">${data[5].smtext}</a>
 
                     </li>
                     <li><a href="http://172.242.3.181:8080/#/reg" title="Honeybee registration is welcomed">${data[6].smtext}</a> </li>
@@ -43,9 +43,9 @@ $(function(){
                 `)
                 $('.mfLogo').click(function(){
                     if(num=="undefined"){
-                            window.location.href=`http://172.242.3.181:7777/index.html`;
+                            window.location.href=`index.html`;
                     }else{
-                         window.location.href=`http://172.242.3.181:7777/index.html?${num}`;
+                         window.location.href=`index.html?${num}`;
                     }
                            
                 })     
@@ -62,7 +62,7 @@ $(function(){
     data:"minid=1",
     dataType: "JSON", 
     async: true, 
-    url: "http://172.242.3.181:7777/myPro/qz_mine",
+    url: "http://book688.applinzi.com:5050/myPro/qz_mine",
     success: function(result){
         $("#box>.inner").html(`
         <ul>

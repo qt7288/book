@@ -17,7 +17,7 @@ $(function(){
         data:{num},
         // dataType: "JSON", 
         async: true, 
-        url: "http://172.242.3.181:7777/myPro/qz_u_all",
+        url: "http://book688.applinzi.com:5050/myPro/qz_u_all",
         success: function(data) {
             if(data.length!=1){
             }else{
@@ -52,7 +52,7 @@ $(function(){
         data:{num},
         // dataType: "JSON", 
         async: true, 
-        url: "http://172.242.3.181:7777/myPro/qz_u_all_img",
+        url: "http://book688.applinzi.com:5050/myPro/qz_u_all_img",
         success: function(data) {
             if(data.length!=1){
             }else{
@@ -73,7 +73,7 @@ $(function(){
                         data: "iid=1",
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://172.242.3.181:7777/myPro/index",
+                        url: "http://book688.applinzi.com:5050/myPro/index",
                         // ${data[0].mimg}
                         success: function(data) {
                             $('.bg-qjt').css({"background":`url() no-repeat fixed`,"background-size":"100%"});
@@ -93,7 +93,7 @@ $(function(){
                         data: "hid=2",
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://172.242.3.181:7777/myPro/qz_iht",
+                        url: "http://book688.applinzi.com:5050/myPro/qz_iht",
                         success: function(data) {
                             $('#header-b').html(`<h1>${data[0].btext}</h1><h2>${data[0].mtext}<h2>`)
                         }
@@ -109,24 +109,24 @@ $(function(){
                         data: "",
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://172.242.3.181:7777/myPro/qz_bq",
+                        url: "http://book688.applinzi.com:5050/myPro/qz_bq",
                         success: function(data) {
                             $("#header-h").html(`
                             <ul>
                             <img src="http://taotao2019.applinzi.com/img/mfeng.png" class="mfLogo" title="蓝蜂☁为您服务">
-                                <li title="home"><a href="http://172.242.3.181:7777/index.html?${num}">${data[0].smtext}</a></li>
-                                <li class="dnone"><a href="http://172.242.3.181:7777/myself.html?${num}">${data[1].smtext}</a> 
+                                <li title="home"><a href="index.html?${num}">${data[0].smtext}</a></li>
+                                <li class="dnone"><a href="myself.html?${num}">${data[1].smtext}</a> 
                                 </li>
                                 <li><a href="javascript:;" class="Reward">${data[3].smtext}</a></li> 
-                                <li><a href="http://172.242.3.181:7777/liuyan.html?user?${num}" title="Message Board">${data[4].smtext}</a></li>
-                                <li class="dnone"><a href="http://172.242.3.181:7777/Fchain.html?${num}" title="Friend chain">${data[5].smtext}</a>
+                                <li><a href="liuyan.html?user?${num}" title="Message Board">${data[4].smtext}</a></li>
+                                <li class="dnone"><a href="Fchain.html?${num}" title="Friend chain">${data[5].smtext}</a>
             
                                 </li>
                                 <li><a href="http://172.242.3.181:8080/#/reg" title="Honeybee registration is welcomed">${data[6].smtext}</a> </li>
                             </ul>
                             `)
                             $('.mfLogo').click(function(){
-                                        window.location.href=`http://172.242.3.181:7777/index.html`;
+                                        window.location.href=`index.html`;
                             })     
                         }
                     });
@@ -140,7 +140,7 @@ $(function(){
                         data: "",
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://172.242.3.181:7777/myPro/qz_b_text",
+                        url: "http://book688.applinzi.com:5050/myPro/qz_b_text",
                         // success: function(btns) {
                         success: function(data) {
                             var btns="";
@@ -170,7 +170,7 @@ $(function(){
                         data: {pageSize},
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://172.242.3.181:7777/myPro/qz_lyans",
+                        url: "http://book688.applinzi.com:5050/myPro/qz_lyans",
                         success: function(data) {
                         $(".s-l").html(`
                                 <div id="lyb-title"><h2>短暂的瞬间，漫长的永远</h2></div>
@@ -231,7 +231,7 @@ $(function(){
                         data: {num,txta},
                         dataType: "JSON", 
                         async: true, 
-                        url: "http://172.242.3.181:7777/myPro/qz_lyan",
+                        url: "http://book688.applinzi.com:5050/myPro/qz_lyan",
                         // 成功的时候操作
                         success: function(data) {
                             $("#Tips").css("display","block");
@@ -252,7 +252,7 @@ $(function(){
                                 data: {num,pageSize},
                                 dataType: "JSON", 
                                 async: true, 
-                                url: "http://172.242.3.181:7777/myPro/qz_lyans",
+                                url: "http://book688.applinzi.com:5050/myPro/qz_lyans",
                                 // 成功的时候操作
                                 success: function(data) {
                                 var ta="";
@@ -399,7 +399,7 @@ $(function(){
                 `)
             $('.share_qq').click(function(){
                                                             // event.preventDefault();
-                var _url="http://172.242.3.181:7777";
+                var _url="http://book688.applinzi.com:5050";
                 var _showcount=1;
                 var _desc="Tao";
                 var _summary="主页内容";
@@ -417,7 +417,7 @@ $(function(){
                     window.open(_shareUrl,'_blank');
             })
         //   $('.share_qq_firends').click(function(){ 
-        //       var _url="http://172.242.3.181:7777";
+        //       var _url="http://book688.applinzi.com:5050";
         //       var _title="我的主页";
         //         var _shareUrl = 'https://connect.qq.com/widget/shareqq/iframe_index.html?';
         //             _shareUrl += 'url=' + encodeURIComponent(_url||location.href);   //分享的链接

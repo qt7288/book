@@ -5,7 +5,7 @@ $(function(){
         data: "",
         dataType: "JSON", 
         async: true, 
-        url: "http://172.242.3.181:7777/myPro/qz_bq",
+        url: "http://book688.applinzi.com:5050/myPro/qz_bq",
         success: function(data) {
                 $("#header-h").html(`
                 <ul>
@@ -20,7 +20,7 @@ $(function(){
                     </li>
                     <li><a href="javascript:;">${data[3].smtext}</a></li> 
                     <li><a href="javascript:;">${data[4].smtext}</a></li>
-                    <li class="dnone"><a href="http://172.242.3.181:7777/Fchain.html" title="Friend chain">${data[5].smtext}</a>
+                    <li class="dnone"><a href="Fchain.html" title="Friend chain">${data[5].smtext}</a>
                         <ul class="dul">
                             <li class="gw">${data[10].smtext}</li>
                             <li class="sb">${data[11].smtext}</li>
@@ -47,7 +47,7 @@ $(function(){
         data:"",         
         dataType: "JSON", 
         async: true, 
-        url: "http://172.242.3.181:7777/myPro/qz_textt",
+        url: "http://book688.applinzi.com:5050/myPro/qz_textt",
         success: function(data) {
            
 

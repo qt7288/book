@@ -143,7 +143,7 @@ $(function(){
                     data:"",
                     dataType:"JSON",
                     // async: false, 
-                    url: "http://172.242.3.181:7777/rootR/qz_timeThings",
+                    url: "http://book688.applinzi.com:5050/rootR/qz_timeThings",
                     success: function(data) {   
                         console.log(data);
                         console.log(data.data.length);
@@ -180,7 +180,7 @@ $(function(){
                 data:{thing,timeCt},
                 dataType:"JSON",
                  // async: false, 
-            url: "http://172.242.3.181:7777/rootR/qz_timeThing",
+            url: "http://book688.applinzi.com:5050/rootR/qz_timeThing",
             success: function(data) {   
                 // console.log(data);
                 // console.log(data.data.length);
