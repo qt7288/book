@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reg.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <title>Document</title>
+</head>
+<body>
+                <div id="cc">
+                        <h2 class="text-dark">reg</h2>
+                        <form method="post" action="/long_user/register">
+                            <input type="text" id="d1" name="uname" class="form-control" placeholder="username..." /><span></span>
+                            <br/>
+                            <input type="password" id="d2" class="form-control" name="upwd" placeholder="password..." /><span></span>
+                            <br>
+                            <input type="text" id="d3" name="email" class="form-control" placeholder="email..." /><span></span>
+                            <br>
+                            <input type="text" id="d5" name="ctime" class="form-control" placeholder="autograph..." />
+                            <br>
+                            <div class="form-inline sex">
+                            
+                                <input type="radio" id="man" name="gender" checked="checked" value="1"><label for="man">男</label>
+                                <input type="radio" id="woman" name="gender" value="0"><label for="woman">女</label>
+                            </div>
+                            <div class="col-12">
+                                <input type="button" class="btn btn-lg form-control bg-dark text-light reg" id="btnReg" value="注册">
+                            </div>
+                        </form>
+                </div>    
+        <script>// 局部使用
+          $(function(){
+            // 帐号测试是符合正则表达式
+               $("#d1").blur(function(){
+                            // 注释：测试代码a
+                        var u=$("#d1").val();
+                         var reg=/^[a-z0-9]{3,8}$/i;
+                        if(!reg.test(u)){
+                                //提示信息  Toast("消息提示")
+                                // console.log("用户名格式不正确，请检查");
+                                $("#d1").next().html("用户名格式不正确，请检查");
+                                return;
+                        }
+                        var uname=$("#d1").val();
+               $.ajax({
+                    type:"GET",
+                    data:{uname},
+                    url:"myPro/regU",
+                    success:function(result){
+                        console.log(result);
+                        if(result.code==401){
+                            $("#d1").next().html("已被注册");
+                            $("#d1").val("");
+                            return;
+                        }else{
+                            $("#d1").next().html("可以注册呢");
+                            return;
+                        }
+                    }
+               })
+               })
+                
+               $("#d3").blur(function(){
+                    var email=$("#d3").val();
+                    var ereg=/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;		
+                            if(email==""){console.log("邮箱为空!");return;}
+                            else if(!ereg.test(email)){
+                                console.log("邮箱格式错误，请检查");
+                                $("#d3").next().html("邮箱格式错误，请检查");
+                                return;
+                            }else{
+                                $.ajax({
+                                    type:"GET",
+                                    data:{email},
+                                    url:"myPro/regE",
+                                    success:function(result){
+                                        console.log(result);
+                                        if(result.code==16){
+                                            $("#d3").next().html("邮箱已被注册");
+                                        this.email="";
+                                        return;  
+                                            }
+                                    }
+                                })
+                            }     
+               })
+                $("#btnReg").click(function(){
+                        var u=$("#d1").val()
+                        var p=$("#d2").val()
+                        var email=$("#d3").val()
+                        //获取性别
+                        var gender=$("input:radio[name='gender']:checked").val()
+                        console.log(gender)
+                        // var gender=$("#woman").val();
+                        var ctime="";
+                        var reg=/^[a-z0-9]{3,8}$/i;
+                        if(!reg.test(u)){
+                                //提示信息  Toast("消息提示")
+                                console.log("用户名格式不正确，请检查");
+                                return;
+                        }
+                        if(!reg.test(p)){
+                                 console.log("密码格式不正确，请检查");
+                                return;
+                        }
+                        var ereg=/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;		
+                            if(email==""){Toast("邮箱为空!");return;}
+                            else if(!ereg.test(email)){
+                                console.log("邮箱格式错误，请检查");
+                                return;
+                            }
+                        // 注册判断男女
+                    $.ajax({
+                            type:"GET",
+                            data:{u,p,email,gender,ctime},
+                            url:"myPro/reg",
+                            success:function(result){
+                                if(result.code==200){
+                                   alert(`注册成功.即将跳转登录界面`); 
+                                   setTimeout(function(){     
+                                          window.location.href="login.html";
+                                          alert("欢迎.登录界面");
+                                   },1500)
+                                   return;
+                               }    
+                            }                                               
+                })
+            })
+                // 失去焦点判断是否填写---账号
+                $('#d1').blur(function(){
+                    var p=$("#d1").val();
+                    if(p==""){
+                        console.log("密码不能为空");
+                        return;
+                    }
+                })        
+                })
+        </script> 
+</body>
+</html>
