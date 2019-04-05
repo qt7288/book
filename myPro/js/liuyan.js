@@ -127,8 +127,12 @@ $(function(){
                             </ul>
                             `)
                             $('.mfLogo').click(function(){
+                                if(num=="undefined"){
                                         window.location.href=`index.html`;
-                            })     
+                                }else{
+                                     window.location.href=`index.html?${num}`;
+                                }
+                            }) 
                         }
                     });
                 });
