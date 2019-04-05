@@ -7,30 +7,97 @@ var router=express.Router();
 /*功能*1
 	:login
 */ 
-router.post('/login',(req,res)=>{
-	//获取参数
-	var $uname=req.body.uname;
-	var $upwd=req.body.upwd;
-	if(!$uname){
-		res.send("5");
-		return;
-	}
-	if(!$upwd){
-		res.send("6");
-		return;
-	}
-	var sql="select * from qz_u_all where uname=? and upwd=?";
-	// asasasasasasa
-	pool.query(sql,[$uname,$upwd],(err,result)=>{
-		if(err) throw err;
-
-		if(result.length>0) {
-			res.send(result[0]);
-			console.log(result);
+router.post("/login",(req,res)=>{
+	//2:获取二个参数 uname upwd
+	// var qid=req.query.id;
+	var u = req.body.uname;
+	var p = req.body.upwd;
+	//3:创建sql
+	var sql = "SELECT id FROM qz_u_all";
+	sql+=" WHERE uname = ? AND upwd = md5(?)";
+	//4:执行sql
+	pool.query(sql,[u,p],(err,result)=>{
+		if(err)throw err;
+		//5:获取数据库返回结果
+		//6:返回客户数据
+		if(result.length==0){
+		  res.send({code:-1,msg:"用户名或密码有误"});
+		}else{ 
+		  // session存储uid对象
+		  // var id = result[0].id;
+		  // req.session.uid =id;
+		  // res.send({code:1,msg:"登录成功",result:result[0].id});
+		  res.send({code:1,msg:"登录成功",result:u});
 		}
-	});
-});
-
+	})
+  });
+// 功能：用户注册
+//用户get请求请求路径login
+router.get("/reg",(req,res)=>{
+	// 获取二个参数uname upwd
+		var u=req.query.u;
+		var p=req.query.p;
+		var email=req.query.email;
+		// var avatar=req.query.avatar;
+		var gender=req.query.gender;
+		var ctime=req.query.ctime;
+	// 创建sql
+		// var sql="INSERT INTO qz_u_all VALUES(null,u=?,p=md5(?),email=?,avatar=?,gender=?)";
+		var sql1="INSERT INTO qz_u_all VALUES(null,?,md5(?),?,?,now())";
+	// 执行sql
+  
+		pool.query(sql1,[u,p,email,gender,ctime],(err,result)=>{
+			if(err) throw err;
+			// 判断返回客户端的数据
+			// 获取数据库返回结果
+			// 返回客户数据
+			if(result.affectedRows>0){
+				res.send({code:200,msg:"注册成功"});
+			}
+		})
+	})  
+  
+  // 注释：验证用户名是否被注册
+  router.get("/regU",(req,res)=>{
+	  // 获取二个参数uname upwd
+		  var u=req.query.uname;
+	  // 创建sql
+		  // var sql="INSERT INTO qz_u_all VALUES(null,u=?,p=md5(?),email=?,avatar=?,gender=?)";
+		  var sql1="SELECT * FROM qz_u_all WHERE uname = ?";
+	  // 执行sql
+	
+		  pool.query(sql1,[u],(err,result)=>{
+			  if(err) throw err;
+			  if(result.length>0){
+				  res.send({code:401,msg:"已被注册"});
+				  return;
+			  }else{
+				res.send({code:25,msg:"可以注册"});
+  
+			  }
+		  })
+	  })  
+	
+  //验证邮箱是否被注册
+  router.get("/regE",(req,res)=>{
+		// 获取二个参数uname upwd
+			var email=req.query.email;
+		// 创建sql
+			// var sql="INSERT INTO qz_u_all VALUES(null,u=?,p=md5(?),email=?,avatar=?,gender=?)";
+			var sql1="SELECT * FROM qz_u_all WHERE email = ?";
+		// 执行sql
+	  
+			pool.query(sql1,[email],(err,result)=>{
+				if(err) throw err;
+				if(result.length>0){
+					res.send({code:16,msg:"已被注册"});
+					return;
+				}else{
+				  res.send({code:25,msg:"可以注册"});
+				  
+				}
+			})
+		})  
 /*功能*2
 	:获取用户列表
 */ 
