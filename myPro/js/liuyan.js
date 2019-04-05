@@ -34,8 +34,8 @@ $(function(){
                                 <h1>用户您好!请先登录...</h1>
                     </div>
                     <div class="cfr-h1-b zhuce">
-                            <button><a href="http://172.242.3.181:8080/#/login">登录</a></button>
-                            <button><a href="http://172.242.3.181:8080/#/reg">注册</a></button>                      
+                            <button><a href="javascript:;">登录</a></button>
+                            <button><a href="javascript:;">注册</a></button>                      
                      </div>
             `).addClass("disnone");
         }  
@@ -123,7 +123,7 @@ $(function(){
                                 <li class="dnone"><a href="Fchain.html?${num}" title="Friend chain">${data[5].smtext}</a>
             
                                 </li>
-                                <li><a href="http://172.242.3.181:8080/#/reg" title="Honeybee registration is welcomed">${data[6].smtext}</a> </li>
+                                <li><a href="javascript:;" title="Honeybee registration is welcomed">${data[6].smtext}</a> </li>
                             </ul>
                             `)
                             $('.mfLogo').click(function(){
@@ -311,8 +311,8 @@ $(function(){
                                     <h1>用户您好请先登录…</h1>
                                 </div>
                                 <div class="cfr-h1-b">
-                                <button><a href="http://172.242.3.181:8080/#/login">登录</a></button>
-                                <button><a href="http://172.242.3.181:8080/#/reg">注册</a></button>                      
+                                <button><a href="javascript:;">登录</a></button>
+                                <button><a href="javascript:;">注册</a></button>                      
                                 </div>
                             </div>
                             <div class="cfr-b">

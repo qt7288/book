@@ -40,7 +40,7 @@ $(function(){
                     <li class="dnone"><a href="Fchain.html" title="Friend chain">${data[5].smtext}</a>
 
                     </li>
-                    <li><a href="http://172.242.3.181:8080/#/reg" title="Honeybee registration is welcomed">${data[6].smtext}</a> </li>
+                    <li><a href="javascript:;" title="Honeybee registration is welcomed">${data[6].smtext}</a> </li>
                 </ul>
                 `)
                 $('.mfLogo').click(function(){
