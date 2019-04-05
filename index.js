@@ -1,20 +1,14 @@
-﻿//服务器端文件
-//创建web服务器
-const express=require('express');
+﻿const express=require('express');
 const bodyParser=require('body-parser');
-//引入user文件
 const userRouter=require('./routes/long_user.js');
 //const productRouter=require('./routes/product.js');
 const demo=require('./routes/demo.js');
 const myPro=require('./routes/myPro.js');
 const rootR=require('./routes/rootR.js');
-
 //1.1 引入模块 cors
 const cors = require("cors");
 //创建web该服务器，挂载监听端口
-
 var server=express();
-
 server.use(cors({
 	// origin:[
 	// ],

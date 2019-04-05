@@ -74,7 +74,6 @@ $(function(){
                         dataType: "JSON", 
                         async: true, 
                         url: "myPro/index",
-                        // ${data[0].mimg}
                         success: function(data) {
                             $('.bg-qjt').css({"background":`url() no-repeat fixed`,"background-size":"100%"});
                             $('.cfr-b1-b').html(`

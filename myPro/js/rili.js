@@ -137,27 +137,27 @@ $(function(){
     })
 
     // 查询
-    // function timer(){
-    //         $.ajax({
-    //                 type:"GET",
-    //                 data:"",
-    //                 dataType:"JSON",
-    //                 // async: false, 
-    //                 url: "rootR/qz_timethings",
-    //                 success: function(data) {   
-    //                     console.log(data);
-    //                     console.log(data.data.length);
-    //                             var a="";
-    //                             for(var i=0;i<data.data.length;i++){
-    //                                 a+=`
-    //                                 <div class="timeCt" title="发言时间${data.data[i].qtimer}">Ptime◮${data.data[i].timeCt}</div>
-    //                                 <div class="Thing" title="${data.data[i].thing}">Starget•${data.data[i].thing}</div>
-    //                                 `  
-    //                             }
-    //                             $(".timeCard").html(a);
-    //                         }
-    //             })
-    // }timer()  
+    function timer(){
+            $.ajax({
+                    type:"GET",
+                    data:"",
+                    dataType:"JSON",
+                    // async: false, 
+                    url: "rootR/qz_timethings",
+                    success: function(data) {   
+                        console.log(data);
+                        console.log(data.data.length);
+                                var a="";
+                                for(var i=0;i<data.data.length;i++){
+                                    a+=`
+                                    <div class="timeCt" title="发言时间${data.data[i].qtimer}">Ptime◮${data.data[i].timeCt}</div>
+                                    <div class="Thing" title="${data.data[i].thing}">Starget•${data.data[i].thing}</div>
+                                    `  
+                                }
+                                $(".timeCard").html(a);
+                            }
+                })
+    }timer()  
     var w=0;
     $("input").blur(function(){
         w++;
@@ -179,22 +179,22 @@ $(function(){
                 type:"POST",
                 data:{thing,timeCt},
                 dataType:"JSON",
-                 // async: false, 
-            url: "rootR/qz_timething",
-            success: function(data) {   
-                console.log(data);
-                console.log(data.data.length);
-                        // $("input[type=text]").val("");
-                        var a="";
-                        for(var i=0;i<data.data.length;i++){
-                            a+=`
-                            <div class="timeCt">${data.data[i].timeCt}</div>
-                            <div class="Thing">${data.data[i].thing}</div>
-                            `  
-                        }
-                        $(".timeCard").html(a);
+                 async: false, 
+                url: "rootR/qz_timething",
+                success: function(data) {   
+                    console.log(data);
+                    console.log(data.data.length);
+                            // $("input[type=text]").val("");
+                            var a="";
+                            for(var i=0;i<data.data.length;i++){
+                                a+=`
+                                <div class="timeCt">${data.data[i].timeCt}</div>
+                                <div class="Thing">${data.data[i].thing}</div>
+                                `  
+                            }
+                            $(".timeCard").html(a);
                         
-                // timer()
+                timer()
             }})
         }
     })
