@@ -51,9 +51,11 @@ input:last-child{
 .text{
     margin-top: 1rem;
     width: 100%;
-    border:1px solid rgba(0, 0, 0, 0.274);
+    border:0;
+    border:1px solid rgba(0, 0, 0, 0.096);
     height: 2rem;
     font-size: 6px;
+    line-height: 2rem;
     color: red;
 }
 input+span{
