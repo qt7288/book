@@ -13,10 +13,10 @@
                 <h2>M◮feng</h2>
                 <form action="">
                     <span></span> <img src="" alt="">
-                    <input type="text" id="uname" value="" placeholder="username……" />
+                    <input type="text" id="uname" value="" placeholder="username……" /><span></span>
                     <br>
                     <span></span> <img src="" alt="">
-                    <input type="password" id="upwd" placeholder="password……" />
+                    <input type="password" id="upwd" placeholder="password……" /><span></span>
                     <br>
                     <div class="text"></div>
                     <input type="button" value="登录" id="btn" />    
@@ -42,12 +42,14 @@
                             if(!reg.test(uname)){
                         // 如果帐号不符合正则表达式规则，则弹出提示框.提示“用户名格式不正确，请检查.操作停止
                                 //提示信息  Toast("消息提示")
-                                alert("用户名格式不正确，请检查");
+                                // alert("用户名格式不正确，请检查");
+                                $("#uname").next().html("用户名格式不正确，请检查");
                                 return;
                             }
                         // 如果密码不符合正则表达式规则，则弹出提示框，提示密码格式不正确请检查，操作停止
                             if(!reg.test(upwd)){
-                                 alert("密码格式不正确，请检查");
+                                //  alert("密码格式不正确，请检查");
+                                $("#upwd").next().html("密码格式不正确，请检查");
                                 return;
                             }
                         // 3.发送ajax
@@ -66,15 +68,15 @@
                                 console.log(result);
                                 if(result.code==1){
                             // 如果返回值为1，则提示登录成功自动跳转主页页面;
-                                   console.log(result);
-                                   alert("登陆成功,即将跳转主页面");
+                                //    console.log(result);
+                                   $(".text").next().html("登陆成功,即将跳转主页面");
                                    setTimeout(function(){
                                        console.log(result);
                                        window.location.href="index.html?"+result.result;
                                    },2000);
                                    return;
-                               }else{
-                                   alert("用户名和密码有误");
+                               }else{          
+                                   $(".text").next().html("用户名和密码有误");
                                    return;
                                }                     
                             }
@@ -89,8 +91,7 @@
                     $('#upwd').blur(function(){
                         var p=$('#upwd').val(); 
                         if(p==""){console.log("密码不能为空"); return;}
-                    })
-                
+                    })         
 })
         </script>
 </body>
