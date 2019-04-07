@@ -69,14 +69,14 @@
                                 if(result.code==1){
                             // 如果返回值为1，则提示登录成功自动跳转主页页面;
                                 //    console.log(result);
-                                   $(".text").next().html("登陆成功,即将跳转主页面");
+                                   $(".text").html("登陆成功,即将跳转主页面");
                                    setTimeout(function(){
                                        console.log(result);
                                        window.location.href="index.html?"+result.result;
                                    },2000);
                                    return;
                                }else{          
-                                   $(".text").next().html("用户名和密码有误");
+                                   $(".text").html("用户名和密码有误");
                                    return;
                                }                     
                             }
