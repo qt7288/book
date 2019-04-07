@@ -56,6 +56,13 @@ input:last-child{
     font-size: 6px;
     color: red;
 }
+input+span{
+    font-size: 6px;
+    box-sizing: border-box;
+    border:0;
+    color:rgb(255, 0, 0);
+    border-bottom:1px solid rgba(0, 0, 0, 0.308);
+}
 .app-login>form>input:first-child,.app-login>form>input:nth-child(3){
     border:0;
     background-color:#fff;

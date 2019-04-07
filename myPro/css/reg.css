@@ -47,6 +47,8 @@ body{
        color: white;
        font-weight: bold;
        height:3rem;
+       outline: none;
+       border: 0;
     }
 /* sex */
     .sex{
