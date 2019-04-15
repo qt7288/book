@@ -23,9 +23,9 @@ router.post("/login",(req,res)=>{
 		if(result.length==0){
 		  res.send({code:-1,msg:"用户名或密码有误"});
 		}else{ 
-		  // session存储uid对象
-		  // var id = result[0].id;
-		  // req.session.uid =id;
+		//   session存储uid对象
+			
+		  req.session.uid =result[0].id;
 		  // res.send({code:1,msg:"登录成功",result:result[0].id});
 		  res.send({code:1,msg:"登录成功",result:u});
 		}
