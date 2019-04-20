@@ -26,7 +26,6 @@ server.use(session({
 //托管静态文件
 server.use(express.static('./myPro'));
 server.use(express.static('./rootR'));
-
 server.use(bodyParser.urlencoded({
 	extended:false
 }));
