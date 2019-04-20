@@ -3,7 +3,7 @@ var h=window.location.href;
 // 声明变量接收地址栏
 // 控制台输出地址栏信息
 var num=h.split("?")[1];
-console.log(num);
+// console.log(num);
 // 控制台输出地址栏截取的用户id
 /**********************************************************************蜂窝主体文字**********************************************************************/ 
 $(function(){
@@ -35,7 +35,7 @@ $(function(){
         async: true, 
         url: "myPro/qz_bq",
         success: function(data) {
-            console.log(data);
+            // console.log(data);
                 $("#header-h").html(`
                 <ul>
                 <img src="http://taotao2019.applinzi.com/img/mfeng.png" class="mfLogo" title="蓝蜂☁为您服务">
@@ -390,12 +390,12 @@ $(function(){
                     async: true, 
                     url: "myPro/qz_text",
                     success: function(data) {
-                        console.log(data.length);
+                        // console.log(data.length);
                         var h=window.location.href;
                         // 声明变量接收地址栏
                         // 控制台输出地址栏信息
                         var num=h.split("?")[1];
-                        console.log(num);
+                        // console.log(num);
                         var carda="";
                         // 声明card变量装载所需承接的数据线
                         for(var i=0;i<data.length;i++){
@@ -434,7 +434,7 @@ $(function(){
                 var count=1;
                 
                 $('#hye').click(function(){
-                    console.log(data.length);
+                    // console.log(data.length);
                     $('#tye').html("▲");
                     count++
                     var counts=data.length%5+2;

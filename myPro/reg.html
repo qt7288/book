@@ -49,7 +49,7 @@
                     data:{uname},
                     url:"myPro/regU",
                     success:function(result){
-                        console.log(result);
+                        // console.log(result);
                         if(result.code==401){
                             $("#d1").next().html("已被注册");
                             $("#d1").val("");
@@ -67,7 +67,7 @@
                     var ereg=/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;		
                             if(email==""){console.log("邮箱为空!");return;}
                             else if(!ereg.test(email)){
-                                console.log("邮箱格式错误，请检查");
+                                // console.log("邮箱格式错误，请检查");
                                 $("#d3").next().html("邮箱格式错误，请检查");
                                 return;
                             }else{
@@ -76,7 +76,7 @@
                                     data:{email},
                                     url:"myPro/regE",
                                     success:function(result){
-                                        console.log(result);
+                                        // console.log(result);
                                         if(result.code==16){
                                             $("#d3").next().html("邮箱已被注册");
                                         this.email="";
@@ -92,7 +92,7 @@
                         var email=$("#d3").val()
                         //获取性别
                         var gender=$("input:radio[name='gender']:checked").val()
-                        console.log(gender)
+                        // console.log(gender)
                         // var gender=$("#woman").val();
                         var ctime="";
                         var reg=/^[a-z0-9]{3,8}$/i;

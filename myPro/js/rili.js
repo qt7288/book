@@ -79,7 +79,7 @@ $(function(){
         var utime = year + "-" + (month - 1) + "-" + "1"; //得到上月开始日期
         var d = new Date(year, month, 0);
         var length = d.getDate(); //得到当月天数
-        console.log(length);
+        // console.log(length);
         var month_1 = new Date(year, (month - 1), 0);
         var ulength = month_1.getDate(); //得到上月天数
         ym = year + "-" + (month);
@@ -145,8 +145,8 @@ $(function(){
                     // async: false, 
                     url: "rootR/qz_timethings",
                     success: function(data) {   
-                        console.log(data);
-                        console.log(data.data.length);
+                        // console.log(data);
+                        // console.log(data.data.length);
                                 var a="";
                                 for(var i=0;i<data.data.length;i++){
                                     a+=`
@@ -161,7 +161,7 @@ $(function(){
     var w=0;
     $("input").blur(function(){
         w++;
-        console.log(w);
+        // console.log(w);
         // 限制每日发言次数
         if(w>=3){
             alert("给其他伙伴一个机会吧");
@@ -182,8 +182,8 @@ $(function(){
                  async: false, 
                 url: "rootR/qz_timething",
                 success: function(data) {   
-                    console.log(data);
-                    console.log(data.data.length);
+                    // console.log(data);
+                    // console.log(data.data.length);
                             // $("input[type=text]").val("");
                             var a="";
                             for(var i=0;i<data.data.length;i++){

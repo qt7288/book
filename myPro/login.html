@@ -24,18 +24,11 @@
             </div> 
         <script>
                     // alert(156145);
-                    $(function(){
-
-                    
-                        
+                    $(function(){      
                   $('#btn').click(function(){
                   var uname=$('#uname').val();
                         var upwd=$('#upwd').val();
-                        console.log($('#uname'));
-                        console.log(uname);
-                        // 1.获取用户输入的用户名和密码
-                        //   console.log(123);测试点击操作是否完成！
-                            console.log(uname);
+                            // console.log(uname);
                         // 判断是否符合数据库已存在的用户和密码是否对应
                         // 2.创建正则表达验证用户和密码的格式是否正确
                             var reg=/^[a-z0-9]{3,8}$/i;
@@ -54,9 +47,7 @@
                             }
                         // 3.发送ajax
                             // 1.下载第三方模块npm i axios 在main.js引入模块、跨域配置保存session值选项
-                            // vue-ajax
-                            // 设url路径访问http://172.242.3.181:3000/login该路由'将帐号和密码传递出去
-                            console.log(1121);
+                            // console.log(1121);
                         $.ajax({
                             
                             type:"POST",
@@ -65,13 +56,13 @@
                             async: true, 
                             url:"myPro/login",
                             success:function(result){
-                                console.log(result);
+                                // console.log(result);
                                 if(result.code==1){
                                 // 如果返回值为1，则提示登录成功自动跳转主页页面;
                                 //    console.log(result);
                                    $(".text").html("登陆成功,即将跳转主页面");
                                    setTimeout(function(){
-                                       console.log(result);
+                                    //    console.log(result);
                                        window.location.href="index.html?"+result.result;
                                    },2000);
                                    return;

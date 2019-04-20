@@ -1,13 +1,13 @@
 // 登录
 var h=window.location.href;
-console.log(h);//输出地址
+// console.log(h);//输出地址
 var fum=h.split("?")[1];
 var num=h.split("?")[2];
 if(!num=="undefined"){
     num="Smith";
 }
-console.log(num);
-console.log(fum);
+// console.log(num);
+// console.log(fum);
 $(function(){
     $.ajax({ 
         type: "GET",         
@@ -20,7 +20,7 @@ $(function(){
 
             }else{
    
-           console.log(data);
+        //    console.log(data);
             $('.cfr-h1').html(`
                     <div class="t-xiang denglu">
                         <img src="" alt="">
@@ -56,8 +56,8 @@ $(function(){
         async: true, 
         url: "myPro/qz_text_fpage",
         success: function(result) {
-            console.log(result);
-            console.log(fum);
+            // console.log(result);
+            // console.log(fum);
             if(result==""){
                 var h=window.location.href;
                 var num=h.split("?")[2];
@@ -218,7 +218,7 @@ $(function(){
                 $('.t-xiang').html(`
                             <img src="${data[0].timg}" alt="">
                 `).addClass("disnone");
-                console.log(data[0].timg);
+                // console.log(data[0].timg);
              }
             }
         });
@@ -229,7 +229,7 @@ $(function(){
         var musicObj=document.getElementById("music");
         $("#pause").click(function(){
             musicObj.currentTime=0;
-            console.log(musicObj);
+            // console.log(musicObj);
         })
         $("#play").click(function(){
             if(musicObj!==null){
@@ -311,7 +311,7 @@ $(function(){
             return;
         }else{
             var text=$(".text").val();
-            console.log('用户输入的建议'+text+"用户发言的面板"+fum);
+            // console.log('用户输入的建议'+text+"用户发言的面板"+fum);
                     $.ajax({
                         type:"POST",
                         data:{fum,text,num},
@@ -321,7 +321,6 @@ $(function(){
                         success:function(data){           
                             if(data.code==1){
                                  $(".fpage_btn").css("background-color","green").val("提交成功");
-
                             }
                             $(".text").val("");
                             alert("感谢您的建议，蓝蜂☁会更加努力");

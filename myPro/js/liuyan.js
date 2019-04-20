@@ -3,14 +3,14 @@
 // Note: Login User
 // 注释：登录用户
 var h=window.location.href;
-console.log(h);//输出地址
+// console.log(h);//输出地址
 var fum=h.split("?")[1];
 var num=h.split("?")[2];
 if(!num>0 || num==""){
     num="Smith";
 }
-console.log(num);
-console.log(fum);
+// console.log(num);
+// console.log(fum);
 $(function(){
     $.ajax({ 
         type: "GET",         
@@ -244,7 +244,7 @@ $(function(){
                                 setTimeout(() => {
                                     $("#Tips").css("display","none");
                                     abv(); 
-                                    console.log(`发言成功`);
+                                    // console.log(`发言成功`);
                                 }, 1000);
                         } });}})
 
@@ -364,7 +364,7 @@ $(function(){
                         var musicObj=document.getElementById("music");
                         $("#pause").click(function(){
                             musicObj.currentTime=0;
-                            console.log(musicObj);
+                            // console.log(musicObj);
                         })
                         $("#play").click(function(){
                             if(musicObj!==null){

@@ -81,14 +81,14 @@
 				xhr.onreadystatechange=function(){
 					if(xhr.readyState==4 && xhr.status==200){
 						var result=xhr.responseText;
-						console.log(result);
+						// console.log(result);
 						if(result=="1"){
 							alert('没有查询到用户信息');return;
 							}else if(result==0){
 							alert('id');return;
 							}
 					var user=JSON.parse(result)[0];
-						console.log(user);
+						// console.log(user);
 						id.value=idd;
 
 					uname.value=user.uname;
@@ -140,7 +140,7 @@
 		
 		var formdata="uname="+uname.value+"&upwd="+upwd.value+
 		"&email="+email.value+"&ctime="+ctime.value+"&gender="+gender+"&id="+id.value;
-		console.log(formdata);
+		// console.log(formdata);
 		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		xhr.send(formdata);
 }

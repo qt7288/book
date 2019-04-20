@@ -10,7 +10,7 @@
                         var arr=JSON.parse(result);
                         //可以使用js对象所有的api去操作
                         var c="";
-                        console.log(arr);
+                        // console.log(arr);
                         for(var i=0;i<arr.length;i++){
                             c+="<tr>";
                             c+="<td>"+arr[i].id+"</td>";
@@ -67,7 +67,7 @@
                     xhr.onreadystatechange=function(){
                         if(xhr.readyState==4 && xhr.status==200){
                             var result=xhr.responseText;
-                            console.log(result);
+                            // console.log(result);
                 }	
             };
             var url="/myPro/query?id="+id;
@@ -85,7 +85,7 @@ xhr.onreadystatechange=function(){
             var arr=JSON.parse(result);
             //可以使用js对象所有的api去操作
             var a="";
-            console.log(arr);
+            // console.log(arr);
             for(var i=0;i<arr.length;i++){
                 a+="<tr>";
                 a+="<td>"+arr[i].tid+"</td>";
@@ -203,7 +203,7 @@ inputBox.addEventListener("change",function(){
             var content=param2.val();
             var imagef=param3.val();
 
-            console.log(name+"."+Title+"."+content);
+            // console.log(name+"."+Title+"."+content);
             $.ajax({ 
                 type: "POST",         
                 data: {name,Title,content,imagef},
@@ -211,7 +211,7 @@ inputBox.addEventListener("change",function(){
                 // async: false, 
                 url: "rootR/qz_schuan",
                 success: function(data) {
-                    console.log(data);
+                    // console.log(data);
                     if(data.code==200){
                                        $("input[name='a']").val("");
                                         $("input[name='b']").val("");
@@ -227,7 +227,7 @@ inputBox.addEventListener("change",function(){
     $('.btn2').click(function(){
         var param6 = $("input[name='tid']");
         var tid=param6.val();
-        console.log(tid);
+        // console.log(tid);
         $.ajax({ 
             type: "GET",         
             data: {tid},
@@ -235,7 +235,7 @@ inputBox.addEventListener("change",function(){
             // async: false, 
             url: "rootR/qz_text_select",
             success: function(data){
-                console.log(data);
+                // console.log(data);
                 if(data.code==200){
                     $('.state-h').html(`状态:查询成功`);
                     $("input[name='sltext']").val(`${data.data[0].sltext}`);
@@ -261,7 +261,7 @@ inputBox.addEventListener("change",function(){
                 // async: false, 
                 url: "rootR/qz_text_ins",
                 success: function(data) {
-                    console.log(data);
+                    // console.log(data);
                     if(data.code==200){
                                        $("input[name='sltext']").val("");
                                         // $("input[name='srtext']").val("");
@@ -281,7 +281,7 @@ inputBox.addEventListener("change",function(){
             // async: false, 
             url: "rootR/qz_text_update",
             success: function(data) {
-                console.log(data);
+                // console.log(data);
                 if(data.code==200){
                                    $("input[name='sltext']").val("");
                                     // $("input[name='srtext']").val("");
