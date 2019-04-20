@@ -5,6 +5,7 @@ const userRouter=require('./routes/long_user.js');
 const demo=require('./routes/demo.js');
 const myPro=require('./routes/myPro.js');
 const rootR=require('./routes/rootR.js');
+const session = require('express-session')
 //1.1 引入模块 cors
 const cors = require("cors");
 //创建web该服务器，挂载监听端口
